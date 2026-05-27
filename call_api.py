@@ -25,3 +25,15 @@ def audio_transcript(text):
     speech.write_to_fp(audio_buffer)
     return audio_buffer
 
+
+def quiz_generator(images,level):
+    prompt=f"""Generate 3 quizzed based on the{level}.
+            Make sure to add necessary markdown """
+
+
+    response=client.models.generate_content(
+        model='gemini-3.1-pro-preview',
+        contents=[images,prompt]
+    )
+
+    return response.text
