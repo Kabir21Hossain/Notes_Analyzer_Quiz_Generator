@@ -14,7 +14,7 @@ def note_generator(images):
         ensure to add markdown to differentiate relevancy"""
 
     response = client.models.generate_content(
-        model='gemini-2.0-flash',   # ✅ changed
+        model='gemini-3.5-flash',   # ✅ changed
         contents=[images, prompt]
     )
     return response.text
@@ -22,10 +22,11 @@ def note_generator(images):
 
 def quiz_generator(images, level):
     prompt = f"""Generate 3 quizzes based on the {level}.
-            Make sure to add necessary markdown"""
+            Make sure to add necessary markdown. 
+            Add correct answer after each question with explanation."""
 
     response = client.models.generate_content(
-        model='gemini-2.0-flash',   # ✅ changed
+        model='gemini-3.5-flash',   # ✅ changed
         contents=[images, prompt]
     )
     return response.text
