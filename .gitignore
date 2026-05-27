@@ -1,8 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Environment variables
 .env
-requirements.txt
-text_audio.py
-working_images.py
-/images
-.venv
+
+# Editor directories
+.vscode/
+.idea/
+
+# Byte-compiled / optimized / DLL files
+*.egg-info/
+*.eggs/
+*.whl
+*.pyc
+*.pyo
+*.pyd
+
+# Distribution / packaging
+build/
+dist/
+.eggs/
+
+# Logs and databases
+*.log
+*.sqlite3
+*.db
+
+# Images output
+/images/
+
+# Ignore generated files
+*.manifest
+*.spec
+
+# Ignore IntelliJ project files
+*.iml
+
+# Ignore Mac / Windows system files
+.DS_Store
+Thumbs.db
 
 
