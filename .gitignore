@@ -1,51 +1,32 @@
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
+# Ignore everything by default, then allow only the files we want in Git
+*
+!/.gitignore
+!/README.md
+!/requirements.txt
+!/main.py
+!/call_api.py
 
-# Virtual environments
+# Keep local environment and editor state out of source control
+.env
 .venv/
 venv/
 ENV/
 env/
-
-# Environment variables
-.env
-
-# Editor directories
-.vscode/
 .idea/
-
-# Byte-compiled / optimized / DLL files
-*.egg-info/
-*.eggs/
-*.whl
-*.pyc
-*.pyo
-*.pyd
-
-# Distribution / packaging
-build/
-dist/
-.eggs/
-
-# Logs and databases
+__pycache__/
+Images/
+*.py[cod]
 *.log
 *.sqlite3
 *.db
-
-# Images output
-/images/
-
-# Ignore generated files
-*.manifest
-*.spec
-
-# Ignore IntelliJ project files
+*.egg-info/
+*.eggs/
+*.whl
+*.pyo
+*.pyd
+*.pyd
 *.iml
-
-# Ignore Mac / Windows system files
-.DS_Store
+*.DS_Store
 Thumbs.db
 
 
