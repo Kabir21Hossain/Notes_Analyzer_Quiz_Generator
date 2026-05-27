@@ -8,13 +8,25 @@ load_dotenv()
 key=os.environ.get('GEMINI_API_KEY')
 client =genai.Client(api_key=key)
 
+
 def note_generator(images):
-    prompt="""Summarize the picture as note format at max 100 words,
+    prompt = """Summarize the picture as note format at max 100 words,
         ensure to add markdown to differentiate relevancy"""
 
-    response=client.models.generate_content(
-        model='gemini-3.1-pro-preview',
-        contents=[images,prompt]
+    response = client.models.generate_content(
+        model='gemini-2.0-flash',   # ✅ changed
+        contents=[images, prompt]
+    )
+    return response.text
+
+
+def quiz_generator(images, level):
+    prompt = f"""Generate 3 quizzes based on the {level}.
+            Make sure to add necessary markdown"""
+
+    response = client.models.generate_content(
+        model='gemini-2.0-flash',   # ✅ changed
+        contents=[images, prompt]
     )
     return response.text
 
@@ -26,14 +38,3 @@ def audio_transcript(text):
     return audio_buffer
 
 
-def quiz_generator(images,level):
-    prompt=f"""Generate 3 quizzes based on the{level}.
-            Make sure to add necessary markdown """
-
-
-    response=client.models.generate_content(
-        model='gemini-3-flash-preview',
-        contents=[images,prompt]
-    )
-
-    return response.text

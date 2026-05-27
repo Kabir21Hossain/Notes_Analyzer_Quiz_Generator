@@ -10,8 +10,10 @@ with st.sidebar:
     st.subheader('Controls')
     images=st.file_uploader('Upload the Photos of your notes',type=['JPEG','JPG','PNG'],accept_multiple_files=True)
 
-    pil_images=[Image.open(img) for img in images]
+    
     if images:
+        pil_images=[Image.open(img) for img in images]
+        
         if len(images)>3:
             st.error('Upload 3 images at most')
         else:
@@ -64,7 +66,7 @@ if pressed:
         #Audio transcription
         with st.container(border=True):
             st.subheader('Audio Transcription')
-            with st.spinner:
+            with st.spinner("preparing your audio"):
                 voice=audio_transcript(generated_notes)
                 st.audio(voice)
 

@@ -1,12 +1,14 @@
-# Ignore everything by default, then allow only the files we want in Git
+# Ignore everything by default
 *
-!/.gitignore
-!/README.md
-!/requirements.txt
-!/main.py
-!/call_api.py
 
-# Keep local environment and editor state out of source control
+# Then explicitly allow only these files
+!.gitignore
+!main.py
+!call_api.py
+!README.md
+!requirements.txt
+
+# Keep these out of source control
 .env
 .venv/
 venv/
@@ -14,7 +16,6 @@ ENV/
 env/
 .idea/
 __pycache__/
-Images/
 *.py[cod]
 *.log
 *.sqlite3
@@ -24,9 +25,7 @@ Images/
 *.whl
 *.pyo
 *.pyd
-*.pyd
 *.iml
 *.DS_Store
 Thumbs.db
-
-
+Images/
