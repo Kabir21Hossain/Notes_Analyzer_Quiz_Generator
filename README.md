@@ -27,13 +27,13 @@ Screenshots from the `design/` folder in order:
 
 ### Preview Images
 
-![Design step 1](./design/1.png)
+![Design step 1](design/1.png)
 
-![Design step 2](./design/2.png)
+![Design step 2](design/2.png)
 
-![Design step 3](./design/3.png)
+![Design step 3](design/3.png)
 
-![Design step 4](./design/4.png)
+![Design step 4](design/4.png)
 
 ## Setup
 
